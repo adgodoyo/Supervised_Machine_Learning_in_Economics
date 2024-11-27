@@ -1,0 +1,85 @@
+city,lat,lng,country,iso2,admin_name,capital,population,population_proper
+Bogotá,4.7111,-74.0722,Colombia,CO,Bogotá,primary,7968095,7743955
+Medellín,6.2308,-75.5906,Colombia,CO,Antioquia,admin,2529403,2529403
+Cali,3.4206,-76.5222,Colombia,CO,Valle del Cauca,admin,2471474,2471474
+Barranquilla,10.9833,-74.8019,Colombia,CO,Atlántico,admin,1326588,1274250
+Cartagena,10.4000,-75.5000,Colombia,CO,Bolívar,admin,914552,914552
+Bucaramanga,7.1333,-73.0000,Colombia,CO,Santander,admin,893040,614860
+Cúcuta,7.8942,-72.5039,Colombia,CO,Norte de Santander,admin,806378,806378
+Palermo,2.8917,-75.4375,Colombia,CO,Huila,minor,800000,800000
+Soledad,10.9167,-74.7500,Colombia,CO,Atlántico,minor,676014,676014
+Villavicencio,4.1500,-73.6333,Colombia,CO,Meta,admin,664148,664148
+Pereira,4.8143,-75.6946,Colombia,CO,Risaralda,admin,590554,590554
+Bello,6.3333,-75.5667,Colombia,CO,Antioquia,minor,561955,561955
+Valledupar,10.4833,-73.2500,Colombia,CO,Cesar,admin,544134,544134
+Ibagué,4.4333,-75.2333,Colombia,CO,Tolima,admin,541101,541101
+Montería,8.7500,-75.8833,Colombia,CO,Córdoba,admin,523150,523150
+Soacha,4.5872,-74.2214,Colombia,CO,Cundinamarca,minor,522442,522442
+Santa Marta,11.2419,-74.2053,Colombia,CO,Magdalena,admin,515556,515556
+Manizales,5.1000,-75.5500,Colombia,CO,Caldas,admin,454494,454494
+Buenaventura,3.8772,-77.0267,Colombia,CO,Valle del Cauca,minor,423927,423927
+Pasto,1.2078,-77.2772,Colombia,CO,Nariño,admin,410835,410835
+Neiva,2.9345,-75.2809,Colombia,CO,Huila,admin,380019,380019
+Palmira,3.5833,-76.2500,Colombia,CO,Valle del Cauca,minor,358895,358895
+Fontibón,4.6786,-74.1411,Colombia,CO,Bogotá,,317179,317179
+Usme,4.4464,-74.1522,Colombia,CO,Bogotá,,314431,314431
+Armenia,4.5300,-75.6800,Colombia,CO,Quindío,admin,301226,301226
+Popayán,2.4542,-76.6092,Colombia,CO,Cauca,admin,300837,300837
+Floridablanca,7.2167,-73.0667,Colombia,CO,Santander,minor,295724,267170
+Sincelejo,9.2950,-75.3961,Colombia,CO,Sucre,admin,286716,286716
+Itagüí,6.1667,-75.6167,Colombia,CO,Antioquia,minor,276744,276744
+Envigado,6.1667,-75.5667,Colombia,CO,Antioquia,minor,228848,228848
+Tuluá,4.0833,-76.2000,Colombia,CO,Valle del Cauca,minor,219138,219138
+Tumaco,1.8067,-78.7647,Colombia,CO,Nariño,minor,212692,212692
+Barrancabermeja,7.0667,-73.8500,Colombia,CO,Santander,minor,203537,203537
+Uripa,11.9167,-72.0000,Colombia,CO,La Guajira,,198890,198890
+Zipaquirá,5.0333,-74.0000,Colombia,CO,Cundinamarca,minor,196409,196409
+Florencia,1.6139,-75.6128,Colombia,CO,Caquetá,admin,191867,191867
+Turbo,8.1000,-76.7333,Colombia,CO,Antioquia,minor,181000,181000
+Santander de Quilichao,3.0167,-76.4833,Colombia,CO,Cauca,minor,180000,116535
+Dosquebradas,4.8333,-75.6833,Colombia,CO,Risaralda,minor,179301,179301
+Fusagasugá,4.3452,-74.3618,Colombia,CO,Cundinamarca,minor,170241,170241
+Ríohacha,11.5442,-72.9069,Colombia,CO,La Guajira,admin,167865,167865
+Ipiales,0.8303,-77.6444,Colombia,CO,Nariño,minor,166079,166079
+Tunja,5.5333,-73.3667,Colombia,CO,Boyacá,admin,163894,68905
+Girón,7.0708,-73.1731,Colombia,CO,Santander,minor,160403,160403
+Piedecuesta,7.0833,-73.0000,Colombia,CO,Santander,minor,150483,117364
+Facatativá,4.8167,-74.3667,Colombia,CO,Cundinamarca,minor,145080,117133
+Cartago,4.7000,-75.9167,Colombia,CO,Valle del Cauca,minor,142902,142902
+Malambo,10.8500,-74.7500,Colombia,CO,Atlántico,minor,139566,139566
+Rionegro,6.1535,-75.3743,Colombia,CO,Antioquia,minor,135465,135465
+Pitalito,1.8989,-76.0419,Colombia,CO,Huila,minor,133205,133205
+Quibdó,5.6922,-76.6581,Colombia,CO,Chocó,admin,130825,130825
+Jamundí,3.2667,-76.5500,Colombia,CO,Valle del Cauca,minor,130114,96993
+Girardot,4.3050,-74.8017,Colombia,CO,Cundinamarca,minor,129834,129834
+Ciénaga,11.0069,-74.2500,Colombia,CO,Magdalena,minor,129414,129414
+Guadalajara de Buga,3.9000,-76.3019,Colombia,CO,Valle del Cauca,minor,128945,128945
+Mosquera,4.7078,-74.2328,Colombia,CO,Cundinamarca,minor,128012,91282
+Duitama,5.8333,-73.0167,Colombia,CO,Boyacá,minor,126670,126670
+Chía,4.8500,-74.0500,Colombia,CO,Cundinamarca,minor,124309,97896
+Magangué,9.2500,-74.7667,Colombia,CO,Bolívar,minor,123906,123906
+Maicao,11.3778,-72.2389,Colombia,CO,La Guajira,minor,123757,123757
+Apartadó,7.8833,-76.6333,Colombia,CO,Antioquia,minor,121003,121003
+Uribia,11.9167,-72.0000,Colombia,CO,La Guajira,minor,117674,117674
+Ocaña,8.2333,-73.3500,Colombia,CO,Norte de Santander,minor,116232,90037
+Sogamoso,5.7167,-72.9208,Colombia,CO,Boyacá,minor,116031,114486
+Turbaco,10.3500,-75.3333,Colombia,CO,Bolívar,minor,115000,115000
+Madrid,4.7344,-74.2683,Colombia,CO,Cundinamarca,minor,112254,112254
+Aguachica,8.3167,-73.6333,Colombia,CO,Cesar,minor,109621,109621
+Yopal,5.3500,-72.4100,Colombia,CO,Casanare,admin,106822,106822
+Sabanalarga,6.8500,-75.8167,Colombia,CO,Antioquia,minor,100049,100049
+Arauca,7.0903,-70.7617,Colombia,CO,Arauca,admin,96814,96814
+Funza,4.7167,-74.2167,Colombia,CO,Cundinamarca,minor,90671,80937
+Sabaneta,6.1500,-75.6000,Colombia,CO,Antioquia,minor,82375,82375
+Copacabana,6.3333,-75.5000,Colombia,CO,Antioquia,minor,73574,73574
+San Andrés,12.5847,-81.7006,Colombia,CO,San Andrés y Providencia,admin,71946,71946
+La Estrella,6.1667,-75.6667,Colombia,CO,Antioquia,minor,71545,71545
+San José del Guaviare,2.5667,-72.6333,Colombia,CO,Guaviare,admin,68878,68878
+Mocoa,1.1500,-76.6475,Colombia,CO,Putumayo,admin,56398,56398
+Cajicá,4.9167,-74.0333,Colombia,CO,Cundinamarca,minor,54111,44721
+La Jagua de Ibirico,9.5667,-73.3333,Colombia,CO,Cesar,minor,46722,46722
+Leticia,-4.2167,-69.9333,Colombia,CO,Amazonas,admin,33503,32450
+La Virginia,4.9167,-75.8333,Colombia,CO,Risaralda,minor,32330,32330
+Mitú,1.1983,-70.1733,Colombia,CO,Vaupés,admin,28382,28382
+Inírida,3.8653,-67.9239,Colombia,CO,Guainía,admin,20279,19816
+Puerto Carreño,6.1903,-67.4836,Colombia,CO,Vichada,admin,16763,16763
