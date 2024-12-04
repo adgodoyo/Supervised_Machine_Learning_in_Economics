@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIDEA</title>
+    <style>
+       /
+       h1 {
+            text-align: center;
+            font-size: 36px;
+            background-color: #007BFF; 
+            margin: 0;
+            border-radius: 5px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/025/547/454/non_2x/study-doodle-background-vector.jpg'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 30px;
+            color: #333;
+        }
+
+        video, canvas {
+            display: block;
+            margin: 20px auto;
+        }
+
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 12px 30px;
+            background-color: #007BFF ;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+        }
+
+        button:hover:not(:disabled) {
+            background-color: #45a049;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        
+        input[type="file"] {
+            display: none;
+        }
+
+        label {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        label:hover {
+            background-color: #45a049;
+        }
+
+        /* Mostrar el nombre del archivo seleccionado */
+        #fileName {
+            margin-left: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            z-index: -1;
+        }
+
+        
+        #logoMinisterio {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 100px;
+        }
+
+        
+        .social-icons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            cursor: pointer;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+        }
+
+        /* Estilo para el enlace a los resultados */
+        #resultados-link {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #007BFF;
+        }
+
+        #resultados-link a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        #resultados-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>FIDEA</h1> <!-- Título único "FIDEA" -->
+
+    <!-- Barra de información sobre FIDEA -->
+    <div id="aboutFidea">
+        <h2>¿Qué es FIDEA?</h2>
+        <p>FIDEA (Fortalecimiento Individual Del Aprendizaje), FIDEA es una página web cuyo objetivo es ofrecer tanto a maestros como a estudiantes una plataforma que facilite la evaluación y retroalimentación de exámenes académicos.</p>
+        <p>FIDEA permitirá tanto a estudiantes como a profesores conocer si las respuestas de los estudiantes fueron adecuadas, dependiendo de la temática del examen, y brindará una retroalimentación que mostrará los puntos fuertes y débiles del estudiante. De esta manera, si un estudiante usa FIDEA podrá identificar sus errores y cuáles son los vacíos conceptuales que pueda tener. Para los maestros, FIDEA será una plataforma que simplifique el proceso de evaluación y les permita conocer cuáles son los vacíos y las fortalezas de sus estudiantes en relación con los temas enseñados, para reforzarlos en futuras oportunidades.</p>
+    </div>
+
+    <!-- Captura de Imagen desde la Cámara -->
+    <h2>Capturar Imagen desde la Cámara</h2>
+    <video id="video" width="640" height="480" autoplay></video>
+    <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+    <input type="hidden" id="image" name="image">
+    <button id="captureButton">Tomar Foto</button>
+    <button id="uploadCameraButton" disabled>Subir Imagen Capturada</button>
+    <button id="removeButton" style="display:none;">Quitar Imagen</button>
+    <p id="confirmationMessage" style="display:none;">Imagen capturada y lista para subir.</p>
+
+  <!-- Subir Archivos desde el Computador o Celular -->
+<h2>Subir Archivo desde el Computador o Celular</h2>
+<form id="uploadFileForm" enctype="multipart/form-data">
+    <label for="fileInput">Seleccionar Archivo</label>
+    <input type="file" id="fileInput" name="file" accept="image/*, .pdf, .docx" required>
+    <span id="fileName">Ningún archivo seleccionado</span>
+    <br><br>
+    <!-- Nombre de la persona -->
+    <label for="examIdInput">Nombre completo</label>
+    <input type="text" id="examIdInput" name="exam_id" required>
+    <br><br>
+    <button type="button" id="uploadFileButton">Subir Archivo</button>
+</form>
+
+     <!-- Resultados   -->
+     <p id="resultados-link"> 
+     <a href="https://drive.google.com/drive/u/8/folders/1QuOJHha_SDZThBqsUAFo3ALvGhWK5loh" target="_blank" style="color: #007BFF;">Ver Resultados</a>
+    </p>
+
+    
+    <img id="logoMinisterio" src="ruta-al-logo-del-ministerio.png" alt="Logo del Ministerio de Educación">
+
+    
+    <div class="social-icons">
+        <img src="ruta-a-facebook.png" alt="Facebook">
+        <img src="ruta-a-twitter.png" alt="Twitter">
+        <img src="ruta-a-instagram.png" alt="Instagram">
+    </div>
+
+    <script>
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const imageInput = document.getElementById('image');
+        const captureButton = document.getElementById('captureButton');
+        const uploadCameraButton = document.getElementById('uploadCameraButton');
+        const removeButton = document.getElementById('removeButton');
+        const confirmationMessage = document.getElementById('confirmationMessage');
+        const uploadFileButton = document.getElementById('uploadFileButton');
+        const fileInput = document.getElementById('fileInput');
+        const fileNameDisplay = document.getElementById('fileName');
+
+        //  Nombre del archivo seleccionado
+        fileInput.addEventListener('change', function() {
+            const fileName = fileInput.files[0]?.name || 'Ningún archivo seleccionado';
+            fileNameDisplay.textContent = fileName;
+        });
+
+        // Acceder a la cámara para captura de imágenes
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                video.srcObject = stream;
+            })
+            .catch(error => {
+                console.error("Error al acceder a la cámara:", error);
+            });
+
+        // Capturar la imagen desde la cámara
+        captureButton.addEventListener('click', function() {
+            const context = canvas.getContext('2d');
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            const dataURL = canvas.toDataURL('image/jpeg');
+            imageInput.value = dataURL;
+
+            // Habilitar el botón de subida
+            uploadCameraButton.disabled = false;
+            removeButton.style.display = 'block';
+            confirmationMessage.style.display = 'block';
+            confirmationMessage.textContent = "Imagen capturada y lista para subir.";
+        });
+
+        // Subir la imagen capturada
+        uploadCameraButton.addEventListener('click', function() {
+            const formData = new FormData();
+            formData.append('image', imageInput.value);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert("Imagen subida exitosamente.");
+                    imageInput.value = '';
+                    uploadCameraButton.disabled = true;
+                    removeButton.style.display = 'none';
+                    confirmationMessage.style.display = 'none';
+                    confirmationMessage.textContent = '';
+                } else {
+                    alert("Error al subir la imagen.");
+                }
+            })
+            .catch(error => {
+                console.error("Error al realizar la solicitud:", error);
+            });
+        });
+
+        // Quitar la imagen capturada
+        removeButton.addEventListener('click', function() {
+            imageInput.value = '';
+            uploadCameraButton.disabled = true;
+            removeButton.style.display = 'none';
+            confirmationMessage.style.display = 'none';
+        });
+
+        
+        // Subir un archivo desde el computador o celular
+        uploadFileButton.addEventListener('click', function() {
+        const formData = new FormData();
+        const file = fileInput.files[0];
+        const examIdInput = document.getElementById('examIdInput');
+        const examId = examIdInput.value.trim();
+
+            if (!file) {
+              alert("Por favor selecciona un archivo.");
+              return;
+        }
+
+            if (!examId) {
+              alert("Por favor ingresa tu nombre completo.");
+              return;
+        }
+
+             formData.append('file', file);
+             formData.append('exam_id', examId);
+
+             fetch('/upload_file', {
+             method: 'POST',
+             body: formData
+        })
+             .then(response => {
+               return response.json();  
+        })
+             .then(data => {
+                if (data.error) {
+                   alert("Error al subir el archivo: " + data.error);
+        } else {
+            // Mostrar la retroalimentación
+            const retroalimentacionDiv = document.createElement('div');
+            retroalimentacionDiv.style.marginTop = '20px';
+            retroalimentacionDiv.style.padding = '15px';
+            retroalimentacionDiv.style.border = '1px solid #007BFF';
+            retroalimentacionDiv.style.backgroundColor = '#f9f9f9';
+            retroalimentacionDiv.style.color = '#333';
+
+            retroalimentacionDiv.innerHTML = `
+                <h3>Retroalimentación</h3>
+                <p><strong>Resumen del examen:</strong> ${data.resumen_gemini}</p>
+                <p><strong>Retroalimentación:</strong> ${data.retroalimentacion}</p>
+            `;
+
+            
+            const formContainer = document.getElementById('uploadFileForm');
+
+            // Insertar retroalimentación debajo del botón de "Subir Archivo"
+            formContainer.appendChild(retroalimentacionDiv);
+        }
+    })
+    .catch(error => {
+        console.error("Error al realizar la solicitud:", error);
+    });
+});
+
+    </script>
+</body>
+</html>
+
+
+
